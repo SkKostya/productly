@@ -8,14 +8,15 @@ import {
   CardInfo
 } from "../../components";
 
-import { TOOLS } from "./mock";
+import { TOOLS, CARDS } from "./mock";
 
 import {
   DesignTools,
   DesignInfo,
   DesignTitle,
   Tools,
-  ToolsButton
+  ToolsButton,
+  CardsWrapper
 } from "./styles";
 
 const Home = () => {
@@ -50,22 +51,17 @@ const Home = () => {
       </DesignTools>
 
       <DesignInfo>
-
-        <ImageCard image="./images/feature-1.png">
-          <CardInfo
-            entriesText="asdf"
-            title="adsf"
-            description="asdf"
-            features={[
-              {
-                title: "asdf",
-                description: "asdf"
-              }
-            ]}
-          />
-        </ImageCard>
-        {/* <ImageCard reverse image="./images/feature-2.png"><p>Hello</p></ImageCard>
-        <ImageCard image="./images/feature-3.png"><p>Hello</p></ImageCard> */}
+        <CardsWrapper>
+          {CARDS.map(item =>
+            <ImageCard
+              key={item.image}
+              reverse={!!item?.reverse}
+              image={item.image}
+            >
+              <CardInfo {...item.cardInfo} />
+            </ImageCard>
+          )}
+        </CardsWrapper>
       </DesignInfo>
     </div>
   );

@@ -46,3 +46,11 @@ export const ToolsButton = styled.div`
   justify-content: center;
   margin-top: 34px;
 `;
+
+export const CardsWrapper = styled.div`
+  margin-top: 10px;
+  
+  & > div {
+    margin-top: 100px;
+  }
+`;
