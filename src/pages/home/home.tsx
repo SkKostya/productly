@@ -6,10 +6,10 @@ import {
   Button,
   ImageCard,
   CardInfo,
-  Hero
+  ContactCard
 } from "../../components";
 
-import { TOOLS, CARDS } from "./mock";
+import { TOOLS, CARDS, USERS } from "./mock";
 
 import {
   DesignTools,
@@ -65,10 +65,11 @@ const Home = () => {
         </CardsWrapper>
       </DesignInfo>
 
-      <Hero
-        avatar="./images/hero-1.png"
-        message="I can take care of your pitch"
-        right={true}
+      <ContactCard
+        title="Need a super hero?"
+        description="Do you require some help for your project: Conception workshop, prototyping, marketing strategy, landing page, Ux/UI?"
+        onClick={() => null}
+        users={USERS}
       />
     </div>
   );

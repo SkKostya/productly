@@ -6,7 +6,7 @@ import {
   Image
 } from "./styles";
 
-interface IProps {
+export interface IProps {
   avatar: string;
   message: string;
   right?: boolean;
