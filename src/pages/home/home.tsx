@@ -5,7 +5,8 @@ import {
   Tool,
   Button,
   ImageCard,
-  CardInfo
+  CardInfo,
+  Hero
 } from "../../components";
 
 import { TOOLS, CARDS } from "./mock";
@@ -63,6 +64,12 @@ const Home = () => {
           )}
         </CardsWrapper>
       </DesignInfo>
+
+      <Hero
+        avatar="./images/hero-1.png"
+        message="I can take care of your pitch"
+        right={true}
+      />
     </div>
   );
 };
