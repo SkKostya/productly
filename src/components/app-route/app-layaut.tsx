@@ -1,6 +1,7 @@
 import React from "react";
 
 import AppHeader, { IMenu } from "./app-header/app-header";
+import AppFooter from "./app-footer/app-footer";
 
 import { LayoutContent } from "./styles";
 
@@ -13,6 +14,7 @@ const AppLayout = ({ children, menuItems }: IProps) => (
   <div>
     <AppHeader menuItems={menuItems}/>
     <LayoutContent>{children}</LayoutContent>
+    <AppFooter />
   </div>
 );
 

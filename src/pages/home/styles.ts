@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Button } from "../../components";
+
 import { sizes, colors } from "../../constants";
 
 export const DesignTools = styled.div`
@@ -45,6 +47,10 @@ export const ToolsButton = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 34px;
+`;
+
+export const SignUpButton = styled(Button)`
+  padding: 15px 34px;
 `;
 
 export const CardsWrapper = styled.div`
