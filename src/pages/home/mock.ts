@@ -118,3 +118,38 @@ export const USERS = [
     right: true
   },
 ];
+
+export const SLIDER = [
+  {
+    image: "./images/slider-1.png",
+    author: "Abdullah",
+    date: "03 March 2019",
+    title: "Increasing Prosperity With Positive Thinking",
+    link: "#",
+    isActive: false
+  },
+  {
+    image: "./images/slider-2.png",
+    author: "Abdullah",
+    date: "03 March 2019",
+    title: "Motivation Is The First Step To Success",
+    link: "#",
+    isActive: false
+  },
+  {
+    image: "./images/slider-3.png",
+    author: "Abdullah",
+    date: "03 March 2019",
+    title: "Success Steps For Your Personal Or Business Life",
+    link: "#",
+    isActive: false
+  },
+  {
+    image: "./images/slider-1.png",
+    author: "Abdullah",
+    date: "03 March 2019",
+    title: "Motivation Is The First Step To Success",
+    link: "#",
+    isActive: false
+  },
+];

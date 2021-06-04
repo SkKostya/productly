@@ -54,3 +54,20 @@ export const CardsWrapper = styled.div`
     margin-top: 100px;
   }
 `;
+
+export const SliderTitle = styled.h2`
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 51px;
+  color: ${colors.zeus};
+`;
+
+export const SliderDescription = styled.p`
+  margin-top: 9px;
+  margin-bottom: 55px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: ${colors.judgeGray};
+`;
