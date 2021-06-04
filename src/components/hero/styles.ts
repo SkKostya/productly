@@ -1,11 +1,6 @@
 import styled from "styled-components";
 
-import { colors } from "../../constants";
-
-export const Container = styled.div`
-  display: inline-block;
-  position: relative;
-`;
+import { colors, sizes } from "../../constants";
 
 export const Message = styled.p<{ right: boolean }>`
   position: relative;
@@ -49,6 +44,22 @@ export const Message = styled.p<{ right: boolean }>`
       left: calc(100% - 21px - 9px);
     `}
   }
+  
+  @media(max-width: ${sizes.laptop}px) {
+    ::before {
+      ${({ right }) =>
+      right && `
+        left: 32px;
+      `}
+    }
+  
+    ::after {
+      ${({ right }) =>
+      right && `
+        left: 21px;
+      `}
+    }
+  }
 `;
 
 export const Image = styled.img<{ right: boolean }>`
@@ -64,4 +75,23 @@ export const Image = styled.img<{ right: boolean }>`
     right: 0;
     transform: translate(50%, -12px);
   `}
+`;
+
+export const Container = styled.div`
+  display: inline-block;
+  position: relative;
+
+  @media(max-width: ${sizes.laptop}px) {
+    display: inline-flex;
+    flex-direction: column-reverse;
+
+    ${Image} {
+      position: static;
+      transform: translate(0, 0);
+    }
+
+    ${Message} {
+      margin-left: 45px;
+    }
+  }
 `;

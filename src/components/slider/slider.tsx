@@ -1,6 +1,8 @@
 import React from "react";
-import { useKeenSlider } from "keen-slider/react"
-import "keen-slider/keen-slider.min.css"
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+
+import { sizes } from "../../constants";
 
 import { SliderItem } from "../../components";
 import { IProps as ISliderItem } from "../../components/slider-item/slider-item";
@@ -20,6 +22,7 @@ const Slider = ({ slides }: IProps) => {
   const [allSlides, setAllSlides] = React.useState(slides);
 
   const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [slidesPerView, setSlidesPerView] = React.useState(3);
 
   const slidesChange = (s: number) => {
     const newSlides = allSlides.map((item, i) =>
@@ -31,7 +34,7 @@ const Slider = ({ slides }: IProps) => {
   };
   const [sliderRef, slider] = useKeenSlider<any>({
     initial: 0,
-    slidesPerView: 3,
+    slidesPerView: slidesPerView,
     spacing: 30,
     loop: true,
     centered: true,
@@ -43,6 +46,38 @@ const Slider = ({ slides }: IProps) => {
       slidesChange(s.details().relativeSlide);
     }
   });
+
+  React.useEffect(() => {
+    let resizeTimer: any;
+
+    if(window.innerWidth > sizes.laptop && slidesPerView !== 3) {
+      setSlidesPerView(3);
+    }
+    if(window.innerWidth <= sizes.laptop && window.innerWidth >= sizes.mobileL && slidesPerView !== 2) {
+      setSlidesPerView(2);
+    }
+    if(window.innerWidth <= sizes.mobileL && slidesPerView !== 1) {
+      setSlidesPerView(1);
+    }
+
+    function ScroolFixer(e: any) {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        console.log(e.target.innerWidth)
+        if(e.target.innerWidth > sizes.laptop && slidesPerView !== 3) {
+          setSlidesPerView(3);
+        }
+        if(e.target.innerWidth <= sizes.laptop && window.innerWidth >= sizes.mobileL && slidesPerView !== 2) {
+          setSlidesPerView(2);
+        }
+        if(e.target.innerWidth <= sizes.mobileL && slidesPerView !== 1) {
+          setSlidesPerView(1);
+        }
+      }, 500);
+    }
+
+    window.addEventListener("resize", ScroolFixer);
+  }, [slidesPerView])
 
   return (
     <div>
