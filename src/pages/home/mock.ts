@@ -91,3 +91,30 @@ export const CARDS = [
     }
   },
 ];
+
+export const USERS = [
+  {
+    avatar: "./images/hero-1.png",
+    message: "I can take care of your pitch"
+  },
+  {
+    avatar: "./images/hero-2.png",
+    message: "I can design you website",
+    right: true
+  },
+  {
+    avatar: "./images/hero-3.png",
+    message: "I will define the profile of your users",
+    right: true
+  },
+  {
+    avatar: "./images/hero-4.png",
+    message: "I can prototype your app",
+    right: true
+  },
+  {
+    avatar: "./images/hero-5.png",
+    message: "I can help marketing strategy",
+    right: true
+  },
+];
