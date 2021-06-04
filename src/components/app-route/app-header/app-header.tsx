@@ -27,7 +27,7 @@ const AppHeader = ({ menuItems }: IProps) => {
         <Menu>
           <List>
             {menuItems.map(item =>
-              <ListItem to={item.link}>{item.title}</ListItem>
+              <ListItem key={item.title} to={item.link}>{item.title}</ListItem>
             )}
           </List>
         </Menu>
