@@ -6,10 +6,11 @@ import {
   Button,
   ImageCard,
   CardInfo,
-  ContactCard
+  ContactCard,
+  Slider
 } from "../../components";
 
-import { TOOLS, CARDS, USERS } from "./mock";
+import { TOOLS, CARDS, USERS, SLIDER } from "./mock";
 
 import {
   DesignTools,
@@ -17,7 +18,9 @@ import {
   DesignTitle,
   Tools,
   ToolsButton,
-  CardsWrapper
+  CardsWrapper,
+  SliderTitle,
+  SliderDescription
 } from "./styles";
 
 const Home = () => {
@@ -71,6 +74,12 @@ const Home = () => {
         onClick={() => null}
         users={USERS}
       />
+
+      <DesignInfo>
+        <SliderTitle>Marketing Strategies</SliderTitle>
+        <SliderDescription>Join 40,000+ other marketers and get proven strategies on email marketing</SliderDescription>
+        <Slider slides={SLIDER} />
+      </DesignInfo>
     </div>
   );
 };

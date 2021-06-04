@@ -6,3 +6,5 @@ export { default as ImageCard } from "./image-card";
 export { default as CardInfo } from "./card-info";
 export { default as Hero } from "./hero";
 export { default as ContactCard } from "./contact-card";
+export { default as Slider } from "./slider";
+export { default as SliderItem } from "./slider-item";
