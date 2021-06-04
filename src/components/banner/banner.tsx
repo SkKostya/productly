@@ -11,26 +11,30 @@ import {
   VideoLink
 } from "./styles";
 
-// interface IProps {
-  
-// };
+interface IProps {
+  title: string;
+  description: string;
+  onGetStarted: () => void;
+  image: string;
+  videoLink: string;
+};
 
-const Banner = () => {
+const Banner = ({ title, description, onGetStarted, image, videoLink }: IProps) => {
   return (
     <Container>
       <div>
-        <Title>The Design Thinking superpowers</Title>
-        <Description>Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.</Description>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
         <ButtonsWrapper>
-          <GetStarted>Get started</GetStarted>
+          <GetStarted onClick={onGetStarted}>Get started</GetStarted>
           <WatchVideo>
             <img src="./images/play.svg" alt="Error" />
-            <VideoLink to="#">Watch the Video</VideoLink>
+            <VideoLink to={videoLink}>Watch the Video</VideoLink>
           </WatchVideo>
         </ButtonsWrapper>
       </div>
 
-      <Image src="./images/banner-image.png" />
+      <Image src={image} />
     </Container>
   );
 };
