@@ -5,13 +5,14 @@ import { ImageContainer, Title, Description } from "./styles";
 interface IProps {
   image: string;
   title: string;
+  color: string;
   description: string;
 };
 
-const Tool = ({ image, title, description }: IProps) => {
+const Tool = ({ image, title, color, description }: IProps) => {
   return (
     <div>
-      <ImageContainer color="#7752BE">
+      <ImageContainer color={color}>
         <img src={image} alt="Error" />
       </ImageContainer>
       <Title>{title}</Title>

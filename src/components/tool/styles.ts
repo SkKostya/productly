@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { LightenDarkenColor } from "../../helpers/lightenDarkenColor";
+
 import { colors } from "../../constants";
 
 export const ImageContainer = styled.div<{ color: string; }>`
@@ -12,7 +14,7 @@ export const ImageContainer = styled.div<{ color: string; }>`
 
   ${({ color }) => `
     background: ${color};
-    box-shadow: 0 3px 10xp 0 ${color};
+    box-shadow: 0 6px 15px 0 ${LightenDarkenColor(color, 30)};
   `}
 `;
 

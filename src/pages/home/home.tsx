@@ -2,8 +2,19 @@ import React from "react";
 
 import {
   Banner,
-  Tool
+  Tool,
+  Button
 } from "../../components";
+
+import { TOOLS } from "./mock";
+
+import {
+  DesignTools,
+  DesignInfo,
+  DesignTitle,
+  Tools,
+  ToolsButton
+} from "./styles";
 
 const Home = () => {
   return (
@@ -16,11 +27,25 @@ const Home = () => {
         videoLink="#"
       />
 
-      <Tool
-        image="./images/tool-1.svg"
-        title="First click tests"
-        description="While most people enjoy casino gambling,"
-      />
+      <DesignTools>
+        <DesignInfo>
+          <DesignTitle>We design tools to unveil your superpowers</DesignTitle>
+          <Tools>
+            {TOOLS.map(item =>
+              <Tool
+                key={item.title}
+                image={item.image}
+                title={item.title}
+                color={item.color}
+                description={item.description}
+              />
+            )}
+          </Tools>
+          <ToolsButton>
+            <Button>SIGN UP NOW</Button>
+          </ToolsButton>
+        </DesignInfo>
+      </DesignTools>
     </div>
   );
 };
