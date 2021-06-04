@@ -3,7 +3,8 @@ import React from "react";
 import {
   Banner,
   Tool,
-  Button
+  Button,
+  ImageCard
 } from "../../components";
 
 import { TOOLS } from "./mock";
@@ -46,6 +47,13 @@ const Home = () => {
           </ToolsButton>
         </DesignInfo>
       </DesignTools>
+
+      <DesignInfo>
+
+        <ImageCard image="./images/feature-1.png"><p>Hello</p></ImageCard>
+        {/* <ImageCard reverse image="./images/feature-2.png"><p>Hello</p></ImageCard>
+        <ImageCard image="./images/feature-3.png"><p>Hello</p></ImageCard> */}
+      </DesignInfo>
     </div>
   );
 };
