@@ -4,7 +4,8 @@ import {
   Banner,
   Tool,
   Button,
-  ImageCard
+  ImageCard,
+  CardInfo
 } from "../../components";
 
 import { TOOLS } from "./mock";
@@ -50,7 +51,19 @@ const Home = () => {
 
       <DesignInfo>
 
-        <ImageCard image="./images/feature-1.png"><p>Hello</p></ImageCard>
+        <ImageCard image="./images/feature-1.png">
+          <CardInfo
+            entriesText="asdf"
+            title="adsf"
+            description="asdf"
+            features={[
+              {
+                title: "asdf",
+                description: "asdf"
+              }
+            ]}
+          />
+        </ImageCard>
         {/* <ImageCard reverse image="./images/feature-2.png"><p>Hello</p></ImageCard>
         <ImageCard image="./images/feature-3.png"><p>Hello</p></ImageCard> */}
       </DesignInfo>

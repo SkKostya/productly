@@ -11,7 +11,7 @@ export const Container = styled.div<{ reverse?: boolean }>`
   `}
 
   & > div {
-    width: 47.5%;
+    width: 45%;
   }
 
   & > img {
