@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { Button } from "../../components";
+import Button from "../../components/button";
 
 import { sizes, colors } from "../../constants";
 
