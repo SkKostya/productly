@@ -3,7 +3,6 @@ import React from "react";
 import {
   Banner,
   Tool,
-  Button,
   ImageCard,
   CardInfo,
   ContactCard,
@@ -20,7 +19,8 @@ import {
   ToolsButton,
   CardsWrapper,
   SliderTitle,
-  SliderDescription
+  SliderDescription,
+  SignUpButton
 } from "./styles";
 
 const Home = () => {
@@ -49,7 +49,7 @@ const Home = () => {
             )}
           </Tools>
           <ToolsButton>
-            <Button>SIGN UP NOW</Button>
+            <SignUpButton>SIGN UP NOW</SignUpButton>
           </ToolsButton>
         </DesignInfo>
       </DesignTools>
