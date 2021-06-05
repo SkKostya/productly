@@ -67,7 +67,8 @@ export const Wrapper = styled.div`
   justify-content: center;
   margin-top: 140px;
   height: 835px;
-  background: url(../../../images/contact-card.png);
+  // url for localhost: ../../../images/contact-card.png
+  background: url(./images/contact-card.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;

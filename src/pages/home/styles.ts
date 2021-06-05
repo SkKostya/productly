@@ -47,7 +47,8 @@ export const ToolsButton = styled.div`
 export const DesignTools = styled.div`
   margin-top: 110px;
   padding-bottom: 90px;
-  background: url(../../../images/tools-bg.png);
+  // url for localhost: ../../../images/tools-bg.png
+  background: url(./images/tools-bg.png);
   background-size: 100% 60%;
   background-repeat: no-repeat;
   background-position: bottom;
