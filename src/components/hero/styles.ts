@@ -1,15 +1,11 @@
 import styled from "styled-components";
 
-import { colors } from "../../constants";
-
-export const Container = styled.div`
-  display: inline-block;
-  position: relative;
-`;
+import { colors, sizes } from "../../constants";
 
 export const Message = styled.p<{ right: boolean }>`
   position: relative;
   padding: 15px 25px;
+  transform-origin: center center;
   border-radius: 26.5px;
   font-weight: 500;
   font-size: 16px;
@@ -17,6 +13,8 @@ export const Message = styled.p<{ right: boolean }>`
   box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
   background: ${colors.white};
   color: ${colors.zeus};
+  transition: all 0.2s linear;
+  cursor: zoom-in;
 
   ::before {
     content: "";
@@ -49,6 +47,27 @@ export const Message = styled.p<{ right: boolean }>`
       left: calc(100% - 21px - 9px);
     `}
   }
+
+  :hover {
+    transform: scale(1.2);
+    box-shadow: 0px 2px 15px 3px rgba(23, 58, 86, 0.1);
+  }
+  
+  @media(max-width: ${sizes.laptop}px) {
+    ::before {
+      ${({ right }) =>
+      right && `
+        left: 32px;
+      `}
+    }
+  
+    ::after {
+      ${({ right }) =>
+      right && `
+        left: 21px;
+      `}
+    }
+  }
 `;
 
 export const Image = styled.img<{ right: boolean }>`
@@ -64,4 +83,23 @@ export const Image = styled.img<{ right: boolean }>`
     right: 0;
     transform: translate(50%, -12px);
   `}
+`;
+
+export const Container = styled.div`
+  display: inline-block;
+  position: relative;
+
+  @media(max-width: ${sizes.laptop}px) {
+    display: inline-flex;
+    flex-direction: column-reverse;
+
+    ${Image} {
+      position: static;
+      transform: translate(0, 0);
+    }
+
+    ${Message} {
+      margin-left: 45px;
+    }
+  }
 `;

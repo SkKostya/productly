@@ -29,6 +29,14 @@ const GlobalStyles = createGlobalStyle`
   ul, ol {
     list-style-type: none;
   }
+  
+  body {
+    overflow-x: hidden;
+
+    &.non-scroll {
+      overflow: hidden;
+    }
+  }
 `;
 
 export default GlobalStyles;

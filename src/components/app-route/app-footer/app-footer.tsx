@@ -8,20 +8,19 @@ import {
   Form,
   FooterItemsTitle,
   Input,
-  FormButton
+  FormButton,
+  LogoWrapper
 } from "./styles";
-
-// interface IProps {
-  
-// };
 
 const AppFooter = () => {
   return (
     <Footer>
-      <Logo src="./images/logo.png" />
+      <LogoWrapper>
+        <Logo src="./images/logo.png" />
+      </LogoWrapper>
 
       <Menu>
-        <FooterItemsTitle>Quick Links</FooterItemsTitle>
+        <p>Quick Links</p>
 
         <div>
           <QuickLink to="#">About Us</QuickLink>
@@ -32,7 +31,7 @@ const AppFooter = () => {
       </Menu>
       
       <Menu>
-        <FooterItemsTitle>Legal Stuff</FooterItemsTitle>
+        <p>Legal Stuff</p>
 
         <div>
           <QuickLink to="#">Disclaimer</QuickLink>

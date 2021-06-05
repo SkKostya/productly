@@ -9,7 +9,8 @@ import {
   Title,
   Description,
   CardButton,
-  HeroWrapper
+  HeroWrapper,
+  HerosWrapper
 } from "./styles";
 
 interface IProps {
@@ -29,11 +30,13 @@ const ContactCard = ({ title, description, onClick, users }: IProps) => {
         <Description>{description}</Description>
         <CardButton onClick={onClick}>Contact our expert</CardButton>
 
-        {currentCountOfUsers.map((item, i) =>
-          <HeroWrapper className={"contact-card-" + (i + 1)} key={item.avatar}>
-            <Hero {...item} />
-          </HeroWrapper>
-        )}
+        <HerosWrapper>
+          {currentCountOfUsers.map((item, i) =>
+            <HeroWrapper className={"contact-card-" + (i + 1)} key={item.avatar}>
+              <Hero {...item} />
+            </HeroWrapper>
+          )}
+        </HerosWrapper>
       </Container>
     </Wrapper>
   );

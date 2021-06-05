@@ -4,19 +4,14 @@ import { Button } from "../../components";
 
 import { sizes, colors } from "../../constants";
 
-export const DesignTools = styled.div`
-  margin-top: 110px;
-  padding-bottom: 90px;
-  background: url(../../../images/tools-bg.png);
-  background-size: 100% 60%;
-  background-repeat: no-repeat;
-  background-position: bottom;
-`;
-
 export const DesignInfo = styled.div`
   margin: 0 auto;
   max-width: ${sizes.desktop}px;
   width: 100%;
+
+  @media(max-width: ${sizes.desktop}px) {
+    padding: 0 15px;
+  }
 `;
 
 export const DesignTitle = styled.h2`
@@ -49,6 +44,81 @@ export const ToolsButton = styled.div`
   margin-top: 34px;
 `;
 
+export const DesignTools = styled.div`
+  margin-top: 110px;
+  padding-bottom: 90px;
+  background: url(../../../images/tools-bg.png);
+  background-size: 100% 60%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  @media(max-width: ${sizes.laptop}px) {
+    background-size: 100% 30%;
+
+    ${DesignTitle} {
+      font-size: 32px;
+      line-height: 48px;
+    }
+
+    ${Tools} {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      & > div {
+        width: calc(100%/3);
+    
+        :nth-child(2n + 2) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @media(max-width: ${sizes.tablet}px) {
+    ${DesignTitle} {
+      font-size: 30px;
+      line-height: 44px;
+    }
+
+    ${Tools} {
+      & > div {
+        width: calc(100%/2 - (45px / 2));
+    
+        :nth-child(2n + 2) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @media(max-width: ${sizes.mobile}px) {
+    margin-top: 80px;
+    background-size: 100% 10%;
+
+    ${DesignTitle} {
+      font-size: 22px;
+      line-height: 32px;
+    }
+
+    ${Tools} {
+      margin-top: 18px;
+
+      & > div {
+        margin-top: 28px;
+        margin-right: 0 !important;
+        width: 80%;
+      }
+    }
+
+    ${ToolsButton} {
+      & > button {
+        width: 80%;
+        text-align: center;
+      }
+    }
+  }
+`;
+
 export const SignUpButton = styled(Button)`
   padding: 15px 34px;
 `;
@@ -59,6 +129,12 @@ export const CardsWrapper = styled.div`
   & > div {
     margin-top: 100px;
   }
+
+  @media(max-width: ${sizes.mobile}px) {
+    & > div {
+      margin-top: 60px;
+    }
+  }
 `;
 
 export const SliderTitle = styled.h2`
@@ -67,6 +143,12 @@ export const SliderTitle = styled.h2`
   font-size: 34px;
   line-height: 51px;
   color: ${colors.zeus};
+
+  @media(max-width: ${sizes.laptop}px) {
+    margin-top: 45px;
+    font-size: 22px;
+    line-height: 32px;
+  }
 `;
 
 export const SliderDescription = styled.p`
@@ -76,4 +158,8 @@ export const SliderDescription = styled.p`
   font-size: 16px;
   line-height: 26px;
   color: ${colors.judgeGray};
+
+  @media(max-width: ${sizes.laptop}px) {
+    margin-bottom: 40px;
+  }
 `;

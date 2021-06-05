@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { colors } from "../../constants";
+import { colors, sizes } from "../../constants";
 
 export const Container = styled.div`
   display: flex;
@@ -55,4 +55,9 @@ export const Title = styled(Link)<{ activeSlide: boolean }>`
   activeSlide && `
     color: ${colors.orangePeel};
   `}
+
+  @media(max-width: ${sizes.laptop}px) {
+    font-size: 18px;
+    line-height: 26px;
+  }
 `;

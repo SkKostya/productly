@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { colors } from "../../constants";
+import { colors, sizes } from "../../constants";
 
 export const Title = styled.h2`
   margin: 3px 0 22px;
@@ -8,6 +8,16 @@ export const Title = styled.h2`
   font-size: 36px;
   line-height: 54px;
   color: ${colors.zeus};
+
+  @media(max-width: ${sizes.tablet}px) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  @media(max-width: ${sizes.mobile}px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
 `;
 
 export const List = styled.ul`
@@ -22,6 +32,10 @@ export const Item = styled.li<{ withoutTitle?: boolean }>`
     display: flex;
     align-items: center;
   `}
+
+  @media(max-width: ${sizes.mobile}px) {
+    margin-top: 14px;
+  }
 `;
 
 export const SubTitle = styled.h3`
@@ -33,6 +47,14 @@ export const SubTitle = styled.h3`
 
   :first-child {
     margin-top: 30px;
+  }
+
+  @media(max-width: ${sizes.mobile}px) {
+    margin-top: 18px;
+
+    :first-child {
+      margin-top: 24px;
+    }
   }
 `;
 
@@ -46,6 +68,10 @@ export const Check = styled.div`
   height: 35px;
   border-radius: 13.8542px;
   background: ${colors.orangePeel};
+
+  @media(max-width: ${sizes.mobile}px) {
+    margin-right: 18px;
+  }
 `;
 
 export const Description = styled.p`
