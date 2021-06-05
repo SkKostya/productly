@@ -60,7 +60,7 @@ const AppHeader = ({ menuItems }: IProps) => {
 
   return(
     <Container>
-      <Logo src="./images/logo.png" />
+      <Logo src="./images/main-logo.png" />
 
       <Info>
         <Menu>

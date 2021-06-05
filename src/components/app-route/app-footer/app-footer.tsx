@@ -16,7 +16,7 @@ const AppFooter = () => {
   return (
     <Footer>
       <LogoWrapper>
-        <Logo src="./images/logo.png" />
+        <Logo src="./images/main-logo.png" />
       </LogoWrapper>
 
       <Menu>

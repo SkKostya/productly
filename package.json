@@ -2,6 +2,7 @@
   "name": "productly",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://skkostya.github.io/productly/",
   "dependencies": {
     "keen-slider": "^5.4.1",
     "react": "^17.0.2",
