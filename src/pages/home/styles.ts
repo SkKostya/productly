@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Button } from "../../components";
+
 import { sizes, colors } from "../../constants";
 
 export const DesignInfo = styled.div`
@@ -115,6 +117,10 @@ export const DesignTools = styled.div`
       }
     }
   }
+`;
+
+export const SignUpButton = styled(Button)`
+  padding: 15px 34px;
 `;
 
 export const CardsWrapper = styled.div`

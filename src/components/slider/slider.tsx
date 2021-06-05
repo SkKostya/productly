@@ -63,7 +63,6 @@ const Slider = ({ slides }: IProps) => {
     function ScroolFixer(e: any) {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(function() {
-        console.log(e.target.innerWidth)
         if(e.target.innerWidth > sizes.laptop && slidesPerView !== 3) {
           setSlidesPerView(3);
         }
